@@ -66,19 +66,22 @@ function App() {
   };
 
   return (
-    <div className='p-10'>
-      <Profile onClick={handleClick} active={currentTimeframe} />
-      {data.map((item) => (
-        <Card
-          color={colors[item.title].color}
-          imgSrc={colors[item.title].imgSrc}
-          alt={colors[item.title].alt}
-          title={item.title}
-          time={item.timeframes[currentTimeframe].current}
-          timeframe={lastTime}
-          previous={item.timeframes[currentTimeframe].previous}
-        />
-      ))}
+    <div className='flex justify-center items-center min-h-screen'>
+      <div className='py-10 grid grid-cols-1 md:grid-cols-4 gap-5 md:grid-rows-2 max-w-[900px]'>
+        <Profile onClick={handleClick} active={currentTimeframe} />
+        {data.map((item) => (
+          <Card
+            key={item.title}
+            color={colors[item.title].color}
+            imgSrc={colors[item.title].imgSrc}
+            alt={colors[item.title].alt}
+            title={item.title}
+            time={item.timeframes[currentTimeframe].current}
+            timeframe={lastTime}
+            previous={item.timeframes[currentTimeframe].previous}
+          />
+        ))}
+      </div>
     </div>
   );
 }

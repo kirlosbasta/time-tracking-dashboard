@@ -1,7 +1,7 @@
 {
   "name": "time-tracking-dashboard",
   "homepage": "https://kirlosbasta.github.io/time-tracking-dashboard/",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

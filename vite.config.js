@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'https://kirlosbasta.github.io/time-tracking-dashboard/',
+  base: '/time-tracking-dashboard/',
   plugins: [react(), tailwindcss()],
 });
 
